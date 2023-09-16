@@ -1,0 +1,226 @@
+body {
+    background: linear-gradient(110.6deg, rgb(179, 157, 219) 7%, rgb(150, 159, 222) 47.7%, rgb(24, 255, 255) 100.6%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+footer {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+input:focus{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+#city-type {
+    width: 500px;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: #017AD3;
+    border: 1px solid;
+}
+
+.main {
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/236/original/4156249.jpg?1694787617");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.09);
+    width: 850px;
+    display: block;
+    margin: 100px auto;
+    padding: 10PX 20PX;
+    margin-bottom: 3%;
+}
+
+.search-input{
+    display: flex;
+}
+
+.search-btn {
+    border: 2px solid;
+    box-shadow: #017AD3;
+    color: black;
+    margin-top: 10px;
+    margin-left: 150px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+    width: 200px;
+    transition: all 200ms ease-in-out;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.18);
+    opacity: 0.3;
+}
+
+.search-btn:hover {
+    background-color: white;
+    color: #AFC6FC;
+
+}
+
+.current-btn{
+    border: 2px solid;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+    width: 200px;
+    transition: all 200ms ease-in-out;
+    /*box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.18);*/
+    box-shadow: #017AD3;
+    opacity: 0.3;
+}
+
+.current-btn:hover{
+    background-color: white;
+    color: #AFC6FC;
+}
+
+.current-area {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 10px;
+    font-size: 23px;
+    opacity: 0.7;
+    color: white;
+}
+
+.location-tag {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    size: 15px;
+
+}
+
+.current-day {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: white;
+
+}
+
+.temparature {
+    margin: 10px, 10px;
+    padding: auto;
+}
+
+.card-weather {
+    font-family: 'Roboto Slab', serif;
+    width: 120px;
+    text-align: center;
+    color: white;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.weather-image {
+    display: block;
+    margin: 0 auto;
+    width: 75px;
+}
+
+.card-title {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.current-details {
+    font-family: 'Roboto Slab', serif;
+    margin-left: 20px;
+    color: white;
+}
+
+.weather-conditions {
+    font-family: 'Roboto Slab', serif;
+    text-align: right;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    color: white;
+}
+
+.feels-like {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    margin-left: 350px;
+    color: white;
+
+}
+
+.card-body {
+    margin-left: 10px;
+}
+
+.current-temprature {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    margin-left: 175px;
+    margin-top: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+.max-temp {
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+}
+
+.card-row{
+   display: flex; 
+   flex-wrap: wrap;
+   box-sizing: border-box;
+   color: white;
+   font-weight: 200;
+}
+
+.unit {
+    font-size: 25px;
+    color: black;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+a:link {
+    color:white;
+}
+
+.cloud-image {
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    top: 50px;
+    left: 250px;
+    opacity: 0.6;
+}
+
+.cloud-image1 {
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    top: 85px;
+    left: 180px;
+}

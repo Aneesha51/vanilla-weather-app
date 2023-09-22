@@ -242,7 +242,8 @@ a:link {
     background: rgba(144, 214, 239, 0.4);
     margin-left: 100px;
     margin-top: 15px;
-    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
 }
 
 .prediction-humidity {
@@ -252,7 +253,8 @@ a:link {
     background: rgba(144, 214, 239, 0.4);
     margin-left: 15px;
     margin-top: 10px;
-    font-weight: bold;
+    font-size: 20px;
+    
 }
 
 .prediction-wind {
@@ -262,7 +264,7 @@ a:link {
     border-radius: 6px 6px 6px 6px;
     background: rgba(144, 214, 239, 0.4);
     margin-left: 15px;
-    font-weight: bold;
+    font-size: 20px;
 }
 
 .image {
@@ -274,4 +276,5 @@ a:link {
 .temp {
     position: relative;
     margin-left: -40px;
+    font-size: 60px;
 }

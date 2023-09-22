@@ -186,6 +186,7 @@ input:focus{
     margin-top: 20px;
     color: white;
     font-weight: bolder;
+    display: block;
 }
 
 .max-temp {
@@ -203,10 +204,11 @@ input:focus{
 }
 
 .unit {
-    font-size: 25px;
+    font-size: 15px;
     color: black;
-    margin-bottom: 15px;
-    position: relative;
+    position: absolute;
+    margin-left: -5px;
+    margin-top: 15px;
 }
 
 a:link {
@@ -263,3 +265,13 @@ a:link {
     font-weight: bold;
 }
 
+.image {
+    margin-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.temp {
+    position: relative;
+    margin-left: -40px;
+}

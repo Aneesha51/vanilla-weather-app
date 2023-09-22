@@ -59,7 +59,7 @@
 
 
                     <div class="current-temprature">
-                        <img src="images/clear-sky-day.png" alt="clear skies" id="icon">
+                        <img src="images/clear-sky-day.png" alt="clear skies" id="icon" class="float-left">
                         <strong id="degrees">22</strong>
                         <span class="unit">
                             <a href="#" id="celsius-link">°C |</a>
@@ -72,19 +72,23 @@
                         °C
                     </div>
                 </div>
-
-                <div class="col-12">
-                    <ul class="weather-conditions">
-                        <li>Precipitation
-                            <span id="precipitation-value">50%</span>
-                        </li>
-                        <li>Humidity
+                <div class="row prediction-value">
+                <div class="col-3 prediction">
+                     <p>Precipitation
+                        <span id="precipitation-value">50%</span>
+                        </p> 
+                    </div>
+                        <div class="col-3 prediction-humidity">
+                        <p>Humidity
                             <span id="humidity-value">13 %</span>
-                        </li>
-                        <li>Wind
+                        </p>
+                        </div>
+                        <div class="col-3 prediction-wind">
+                        <p>Wind
                             <span id="wind-value">13 km/h</span>
-                        </li>
-                    </ul>
+                        </p>
+                        </div>
+                   
                 </div>
             </div>
             <div class="row card-row">

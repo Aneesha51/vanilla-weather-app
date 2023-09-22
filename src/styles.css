@@ -2,27 +2,18 @@ body {
     background: linear-gradient(110.6deg, rgb(179, 157, 219) 7%, rgb(150, 159, 222) 47.7%, rgb(24, 255, 255) 100.6%);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
 
 }
 
-li {
+p {
     list-style: none;
 
 }
 
-ul {
-    margin-bottom: 50px;
-    text-align: center;
-    padding-right: 15px;
-    border: 1px solid rgba(228, 216, 198, 0.4);
-    border-radius: 5px;
-    background-color: rgba(252, 249, 245, 0.4);
-    margin-left: 585px;
-}
 
 footer {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;;
     font-size: 15px;
     text-align: center;
 }
@@ -79,7 +70,7 @@ input:focus{
     margin-top: 10px;
     margin-left: 150px;
     font-weight: 700;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     width: 200px;
     transition: all 200ms ease-in-out;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.18);
@@ -98,7 +89,7 @@ input:focus{
     margin-top: 10px;
     margin-left: 10px;
     font-weight: 700;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     width: 200px;
     transition: all 200ms ease-in-out;
     box-shadow: #017AD3;
@@ -111,7 +102,7 @@ input:focus{
 }
 
 .current-area {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     margin-top: 20px;
     font-size: 23px;
     color: white;
@@ -125,7 +116,7 @@ input:focus{
 }
 
 .current-day {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     font-size: 20px;
     color: white;
 
@@ -137,12 +128,12 @@ input:focus{
 }
 
 .card-weather {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     width: 120px;
     text-align: center;
     color: white;
     opacity: 0.9;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .weather-image {
@@ -152,21 +143,21 @@ input:focus{
 }
 
 .card-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .current-details {
-    font-family: 'Roboto Slab', serif;
-    margin-left: 20px;
+    font-family: 'Croissant One', cursive;
     color: white;
 }
 
 .weather-conditions {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     font-size: 20px;
     text-align: center;
     margin-bottom: 50px;
@@ -175,9 +166,10 @@ input:focus{
 }
 
 .feels-like {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     font-size: 20px;
     margin-left: 350px;
+    margin-bottom: 10px;
     color: white;
 
 }
@@ -187,7 +179,7 @@ input:focus{
 }
 
 .current-temprature {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Croissant One', cursive;
     text-align: center;
     font-size: 50px;
     margin-left: 175px;
@@ -197,7 +189,7 @@ input:focus{
 }
 
 .max-temp {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bolder;
     color: white;
 }
@@ -228,6 +220,7 @@ a:link {
     top: 50px;
     left: 250px;
     opacity: 0.6;
+    z-index: 2;
 }
 
 .cloud-image1 {
@@ -236,4 +229,37 @@ a:link {
     position: absolute;
     top: 85px;
     left: 180px;
+    z-index: 2;
 }
+
+.prediction {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(228, 216, 198, 0.1);
+    border-radius: 6px 6px 6px 6px;
+    background: rgba(144, 214, 239, 0.4);
+    margin-left: 100px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.prediction-humidity {
+    text-align: center;
+    border: 1px solid rgba(228, 216, 198, 0.1);
+    border-radius: 6px 6px 6px 6px;
+    background: rgba(144, 214, 239, 0.4);
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.prediction-wind {
+    display: inline;
+    text-align: center;
+    border: 1px solid rgba(228, 216, 198, 0.1);
+    border-radius: 6px 6px 6px 6px;
+    background: rgba(144, 214, 239, 0.4);
+    margin-left: 15px;
+    font-weight: bold;
+}
+

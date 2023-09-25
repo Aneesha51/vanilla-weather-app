@@ -1,49 +1,68 @@
-let date = document.querySelector("#date");
+function formatDate(date) {
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let currentDate = new Date();
-let hours = currentDate.getHours();
-let minutes = currentDate.getMinutes();
-let dayToday = currentDate.getDay();
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[dayIndex];
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-date.innerHTML = `${days[dayToday]} ${hours}:${minutes}`;
-
-if (hours < 10) {
-  hours = `0${hours}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
+
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
 
 function showTemperature(response){
     let temperature = Math.round(response.data.temperature.current);
     let temp = document.querySelector(`#degrees`);
     temp.innerHTML= `${temperature}`;
+
     let humidity = document.querySelector(`#humidity-value`);
     humidity.innerHTML = `${response.data.temperature.humidity}%`;
+
     let windSpeed = document.querySelector(`#wind-value`);
     windSpeed.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+
     let feelsLike = document.querySelector(`#estimated-temp`);
     feelsLike.innerHTML = `${Math.round(response.data.temperature.feels_like)}`;
+
     let precipitation = document.querySelector(`#precipitation-value`);
     precipitation.innerHTML = `${response.data.condition.description}`;
+
     let area = document.querySelector(`#city`);
     area.innerHTML = `${response.data.city}, ${response.data.country}`;
-    let dateElement = document.querySelector(`#date`);
-    dateElement.innerHTML = FormData(response.data.dt * 1000);
+
+   
+
     let iconElement = document.querySelector(`#icon`);
     iconElement.setAttribute(`src`, `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
     iconElement.setAttribute(`alt`, response.data.condition.description);
+
+   celsiusTemperature = response.data.temperature.current;
+
    console.log(response);
 }
 
@@ -78,6 +97,8 @@ function getCurrentCity(response) {
     let iconElement = document.querySelector(`#icon`);
     iconElement.setAttribute(`src`, `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
     iconElement.setAttribute(`alt`, response.data.condition.description);
+
+    celsiusTemperature = response.data.temperature.current;
     console.log(response);
 }
 
@@ -89,6 +110,26 @@ function retrievePosition(position) {
   axios.get(url).then(getCurrentCity);
 }
 
+function displayfahrenheitTemperature(event){
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(`#degrees`);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector(`#degrees`);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
+
+let celsiusTemperature = null;
+
 navigator.geolocation.getCurrentPosition(retrievePosition);
 
 let currentCity = document.querySelector(`#current-btn`);
@@ -96,3 +137,9 @@ currentCity.addEventListener(`click`, retrievePosition);
 
 let searchButton = document.querySelector(`#search-btn`);
 searchButton.addEventListener("click", getCity);
+
+let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
+fahrenheitLink.addEventListener(`click`, displayfahrenheitTemperature);
+
+let celsiusLink = document.querySelector(`#celsius-link`);
+celsiusLink.addEventListener(`click`, displayCelsiusTemperature);

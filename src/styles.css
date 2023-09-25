@@ -278,3 +278,21 @@ a:link {
     margin-left: -40px;
     font-size: 60px;
 }
+
+.celsius {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.fahrenheit{
+    text-decoration: none;
+}
+
+.unit .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
+}
+
+.unit .active:hover {
+    text-decoration: none;
+}

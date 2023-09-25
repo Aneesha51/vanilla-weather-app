@@ -1,12 +1,29 @@
-let now = new Date();
-let newDate = document.querySelector(`span.current-day`);
+let date = document.querySelector("#date");
 
-let hours = now.getHours();
-let minutes = now.getMinutes();
+let currentDate = new Date();
+let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
+let dayToday = currentDate.getDay();
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let day = days[now.getDay()];
-newDate.innerHTML = `${day} ${hours}:${minutes}`;
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+date.innerHTML = `${days[dayToday]} ${hours}:${minutes}`;
+
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 function showTemperature(response){
     let temperature = Math.round(response.data.temperature.current);
@@ -22,6 +39,8 @@ function showTemperature(response){
     precipitation.innerHTML = `${response.data.condition.description}`;
     let area = document.querySelector(`#city`);
     area.innerHTML = `${response.data.city}, ${response.data.country}`;
+    let dateElement = document.querySelector(`#date`);
+    dateElement.innerHTML = FormData(response.data.dt * 1000);
     let iconElement = document.querySelector(`#icon`);
     iconElement.setAttribute(`src`, `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
     iconElement.setAttribute(`alt`, response.data.condition.description);

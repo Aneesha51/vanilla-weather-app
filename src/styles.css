@@ -282,9 +282,11 @@ a:link {
 .celsius {
     margin-left: 10px;
     text-decoration: none;
+    color: blue;
 }
 
 .fahrenheit{
+    color: blue;
     text-decoration: none;
 }
 

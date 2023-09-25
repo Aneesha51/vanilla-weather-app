@@ -20,8 +20,11 @@ function showTemperature(response){
     feelsLike.innerHTML = `${Math.round(response.data.temperature.feels_like)}`;
     let precipitation = document.querySelector(`#precipitation-value`);
     precipitation.innerHTML = `${response.data.condition.description}`;
-     let area = document.querySelector(`#city`);
+    let area = document.querySelector(`#city`);
     area.innerHTML = `${response.data.city}, ${response.data.country}`;
+    let iconElement = document.querySelector(`#icon`);
+    iconElement.setAttribute(`src`, `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
+    iconElement.setAttribute(`alt`, response.data.condition.description);
    console.log(response);
 }
 
@@ -53,6 +56,9 @@ function getCurrentCity(response) {
     precipitation.innerHTML = `${response.data.condition.description}`;
     let area = document.querySelector(`#city`);
     area.innerHTML = `${response.data.city}, ${response.data.country}`;
+    let iconElement = document.querySelector(`#icon`);
+    iconElement.setAttribute(`src`, `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
+    iconElement.setAttribute(`alt`, response.data.condition.description);
     console.log(response);
 }
 

@@ -35,6 +35,39 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+
+function displayForecast(){
+  let forecastElement = document.querySelector(`#weather-forecast`);
+
+let forecastHTML = `<div class="row card-row">`;
+let days = ["Thu", "Fri", "Sat", "Sun"];
+days.forEach(function(days){
+forecastHTML = forecastHTML + 
+` <div class="col-2">
+    <h5 class="card-title">${days}</h5>
+    <div class="card-weather">
+        <div class="card-body">
+            <p class="text-weather">
+                <img src="images/clear-sky-day.png" alt="Clear Sky"
+                    class="weather-image" width="33">
+                <br>
+            <div class="max-temp">23
+                <span class="icon">°</span>
+                 
+                <span class="min-temp"> 7
+                    <span class="icon">°</span>
+            </div>
+            </p>
+        </div>
+    </div>
+</div>
+`;
+});
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+console.log(forecastHTML);
+}
 function showTemperature(response){
     let temperature = Math.round(response.data.temperature.current);
     let temp = document.querySelector(`#degrees`);
@@ -143,3 +176,5 @@ fahrenheitLink.addEventListener(`click`, displayfahrenheitTemperature);
 
 let celsiusLink = document.querySelector(`#celsius-link`);
 celsiusLink.addEventListener(`click`, displayCelsiusTemperature);
+
+displayForecast();

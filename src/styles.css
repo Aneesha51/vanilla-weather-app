@@ -139,7 +139,8 @@ input:focus{
 .weather-image {
     display: block;
     margin: 0 auto;
-    width: 75px;
+    width: 55px;
+    margin-right: 15px;
 }
 
 .card-title {
@@ -194,7 +195,6 @@ input:focus{
     font-weight: bolder;
     color: white;
     text-align: center;
-    margin-left: 15px ;
     padding: 5px auto;
 }
 
@@ -308,4 +308,9 @@ a:link {
 
 .unit .active:hover {
     text-decoration: none;
+}
+
+.weather-forecast {
+    
+    
 }

@@ -193,6 +193,13 @@ input:focus{
     font-size: 14px;
     font-weight: bolder;
     color: white;
+    text-align: center;
+    margin-left: 15px ;
+    padding: 5px auto;
+}
+
+.min-temp {
+    opacity: 0.7;
 }
 
 .card-row{
@@ -232,6 +239,10 @@ a:link {
     top: 85px;
     left: 180px;
     z-index: 2;
+}
+
+.prediction-value {
+    margin-bottom: 15px;
 }
 
 .prediction {

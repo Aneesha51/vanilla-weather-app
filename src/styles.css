@@ -293,16 +293,16 @@ a:link {
 .celsius {
     margin-left: 10px;
     text-decoration: none;
-    color: blue;
+    color: #6F92CC;
 }
 
 .fahrenheit{
-    color: blue;
+    color: #6F92CC;
     text-decoration: none;
 }
 
 .unit .active {
-    color: rgb(33, 33, 33);
+    color: blue;
     cursor: default;
 }
 

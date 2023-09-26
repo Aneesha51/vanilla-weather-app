@@ -227,7 +227,7 @@ a:link {
     height: 100px;
     position: absolute;
     top: 245px;
-    left: 100px;
+    left: 130px;
     opacity: 0.6;
     z-index: 2;
 }
@@ -237,7 +237,7 @@ a:link {
     height: 100px;
     position: absolute;
     top:200px;
-    left: 75px;
+    left: 85px;
     z-index: 2;
 }
 
